@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rehan Memon - Starlinks - FY 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- If you have Gotham as a web font, define it here -->
+    <!--
+  <style>
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/Gotham-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+    }
+  </style>
+  -->
+
+    <style>
+      /* Improved Header Layout */
+      .header-improved {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid rgba(0, 111, 74, 0.18);
+      }
+
+      .header-left {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .name-block {
+        margin-top: 4px;
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+      }
+
+      .profile-photo {
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2.5px solid var(--primary);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+      }
+
+      .profile-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Email clean style */
+      .email-line a {
+        font-size: 13px;
+        color: var(--secondary) !important;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .email-line a:hover {
+        color: var(--primary) !important;
+        text-decoration: underline;
+      }
+    </style>
+
+    <style>
+      :root {
+        --primary: #006f4a; /* green */
+        --secondary: #58595b; /* dark grey (closest valid to provided HEX) */
+        --accent: #faa633; /* orange */
+        --bg: #f5f7f6;
+        --text-main: #222222;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Gotham", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text-main);
+        line-height: 1.6;
+        padding: 24px;
+      }
+
+      .page {
+        max-width: 1024px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 18px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+        padding: 32px 32px 40px;
+      }
+
+      header {
+        border-bottom: 3px solid rgba(0, 111, 74, 0.18);
+        padding-bottom: 20px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand-title {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .year-badge {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--primary);
+      }
+
+      h1 {
+        font-size: 30px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      .role-line {
+        font-size: 14px;
+        color: var(--secondary);
+      }
+
+      .role-line span {
+        font-weight: 600;
+        color: var(--text-main);
+      }
+
+      .tagline {
+        padding: 10px 16px;
+        border-left: 4px solid var(--accent);
+        font-size: 13px;
+        max-width: 320px;
+        color: var(--secondary);
+        background: rgba(250, 166, 51, 0.08);
+        border-radius: 8px;
+      }
+
+      .section {
+        margin-top: 24px;
+      }
+
+      .section-title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .section-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--secondary);
+        font-weight: 600;
+      }
+
+      .section h2 {
+        font-size: 20px;
+        color: var(--primary);
+      }
+
+      .section-subtitle {
+        font-size: 13px;
+        color: var(--secondary);
+      }
+
+      /* Intro grid */
+      .intro-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 10px;
+      }
+
+      h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+        color: var(--secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      ul {
+        padding-left: 18px;
+        font-size: 13px;
+      }
+
+      ul li {
+        margin-bottom: 4px;
+      }
+
+      /* Image placeholder */
+      .image-placeholder {
+        border: 1.5px dashed rgba(88, 89, 91, 0.4);
+        border-radius: 12px;
+        padding: 12px;
+        text-align: center;
+        font-size: 11px;
+        color: var(--secondary);
+        margin-bottom: 10px;
+      }
+
+      .image-placeholder span {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      /* Project cards */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 10px;
+      }
+
+      .project-card {
+        border-radius: 14px;
+        border: 1px solid rgba(0, 111, 74, 0.14);
+        padding: 14px 14px 12px;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .project-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .project-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .project-tag {
+        font-size: 11px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 111, 74, 0.4);
+        color: var(--secondary);
+      }
+
+      .project-summary {
+        font-size: 12px;
+        color: var(--secondary);
+      }
+
+      .project-list {
+        font-size: 12px;
+        padding-left: 16px;
+        margin-top: 4px;
+      }
+
+      .pill {
+        display: inline-block;
+        font-size: 11px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(0, 111, 74, 0.08);
+        color: var(--primary);
+        margin-right: 4px;
+        margin-bottom: 4px;
+      }
+
+      .roadmap-list {
+        columns: 2;
+        column-gap: 24px;
+        font-size: 13px;
+        padding-left: 18px;
+      }
+
+      /* Gallery Section */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 16px;
+      }
+
+      .gallery-item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .image-placeholder.large {
+        height: 220px;
+        border: 2px dashed rgba(88, 89, 91, 0.4);
+        border-radius: 14px;
+        padding: 12px;
+        font-size: 12px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .gallery-caption {
+        font-size: 12px;
+        color: var(--secondary);
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 26px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(88, 89, 91, 0.2);
+        font-size: 11px;
+        color: var(--secondary);
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .footer-right {
+        text-align: right;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .page {
+          padding: 20px 16px 24px;
+        }
+
+        header {
+          align-items: flex-start;
+        }
+
+        .intro-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .roadmap-list {
+          columns: 1;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Print styles for PDF export */
+      @media print {
+        body {
+          padding: 0;
+          background: #ffffff;
+        }
+
+        .page {
+          box-shadow: none;
+          border-radius: 0;
+          max-width: 100%;
+          margin: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .image-placeholder {
+          border-style: solid;
+          color: #aaaaaa;
+        }
+
+        .image-placeholder.large {
+          border-style: solid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- HEADER / HERO -->
+      <header class="header-improved">
+        <div class="header-left">
+          <!-- <div class="year-badge">Year End Summary · 2025</div> -->
+
+          <div class="name-block">
+            <h1>Rehan Memon</h1>
+            <div class="role-line">
+              <span>Specialist Product Development (SP1)</span> · Starlinks
+            </div>
+            <div class="email-line">
+              <a href="mailto:rehan.memon@starlinks.com"
+                >rehan.memon@starlinks.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="profile-photo">
+            <img src="Rehan.jpeg" alt="Profile Photo" />
+          </div>
+        </div>
+      </header>
+
+      <!-- INTRODUCTION -->
+      <!-- <section class="section" id="introduction">
+        <div class="section-title-row">
+          <div>
+            <div class="section-label">Section 01</div>
+            <h2>Introduction & Role Overview</h2>
+          </div>
+        </div>
+
+        <div class="intro-grid">
+          <div>
+            <h3>Role Overview</h3>
+            <ul>
+              <li>Product Development Specialist at Starlinks.</li>
+              <li>
+                Built scalable platforms unifying CX, Legal, Finance, and
+                Operations.
+              </li>
+              <li>
+                Focused on modular design, system integration, and user-centric
+                tools.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>2025 Focus Areas</h3>
+            <ul>
+              <li>
+                Product ownership across internal and customer-facing platforms.
+              </li>
+              <li>
+                Cross-functional collaboration with CX, Legal, Tech, and
+                Finance.
+              </li>
+              <li>
+                Process automation, backend integrations, and role-based UX.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="section-title-row">
+          <div>
+            <div class="section-label">Section 01</div>
+            <h2>Key Projects</h2>
+          </div>
+          <div class="section-subtitle">
+            LaunchPad · Legal Hub · Error Management · Email Framework ·
+            Internal Ticketing
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- LaunchPad -->
+          <article class="project-card">
+            <div class="project-meta">
+              <div class="project-title">LaunchPad</div>
+              <div class="project-tag">Customer Portal</div>
+            </div>
+            <p class="project-summary">
+              Starlinks’ external-facing portal for all customers, providing a
+              unified digital interface for onboarding, documentation,
+              financials, analytics, support, and account management with
+              role-based control.
+            </p>
+            <ul class="project-list">
+              <li>Adaptive Home page for guest/pending/approved users.</li>
+              <li>Onboarding tracker with real-time status.</li>
+              <li>
+                Document Center & Customer Master Mapping (Shipsy, Mintsoft, WMS
+                etc).
+              </li>
+              <li>
+                Appendix Generator & Rate Card Ingestion (customer-specific
+                pricing).
+              </li>
+              <li>Finance module with D365 integration for KPIs.</li>
+              <li>Customer dashboards for real time analytics via Power BI.</li>
+              <li>Admin panel and role-based access across modules.</li>
+            </ul>
+          </article>
+
+          <!-- LegalHub -->
+          <article class="project-card">
+            <div class="project-meta">
+              <div class="project-title">LegalHub</div>
+              <div class="project-tag">Internal Platform</div>
+            </div>
+
+            <p class="project-summary">
+              A lightweight internal platform to manage legal requests at
+              Starlinks.
+            </p>
+
+            <ul class="project-list">
+              <li>
+                Multi-Type Legal Requests — Contract Review, NDA, Legal Advice,
+                etc.
+              </li>
+              <li>
+                Multi-Level Approval Workflow — Department → GM → MD → Legal.
+              </li>
+              <li>
+                Microsoft Teams Integration — Approve or reject with inline
+                comments.
+              </li>
+              <li>
+                Outlook Email Approvals — Action approvals directly from email.
+              </li>
+              <li>
+                In-App + Email Notifications — Real-time updates with comments.
+              </li>
+              <li>Form-Based Submission — With file uploads</li>
+              <li>Legal Team Directory</li>
+            </ul>
+          </article>
+
+          <!-- Error Management Automation Framework -->
+          <article class="project-card">
+            <div class="project-meta">
+              <div class="project-title">Error Management Automation</div>
+              <div class="project-tag">Internal Framework</div>
+            </div>
+            <p class="project-summary">
+              Internal framework to monitor automation jobs and proactively
+              notify developers when failures occur, enabling faster resolution
+              and fewer escalations.
+            </p>
+            <ul class="project-list">
+              <li>Automation failure detection & detailed logging.</li>
+              <li>Real-time monitoring of automation events.</li>
+              <li>Teams notifications routed to the right developer.</li>
+              <li>Extensible architecture to scale with future workflows.</li>
+            </ul>
+          </article>
+
+          <!-- Email Notification Framework -->
+          <article class="project-card">
+            <div class="project-meta">
+              <div class="project-title">Email Notification Framework</div>
+              <div class="project-tag">Reusable Engine</div>
+            </div>
+            <p class="project-summary">
+              Template-driven email engine supporting real-time data injection,
+              attachments, and trigger-based sends across automation platforms.
+            </p>
+            <ul class="project-list">
+              <li>Reusable notification module across tools & flows.</li>
+              <li>Template-based emails with variable replacement.</li>
+              <li>Runtime injection of IDs, dates, and contextual data.</li>
+              <li>Auto attachments and event-based triggers.</li>
+            </ul>
+          </article>
+
+          <!-- Internal Ticketing System -->
+          <article class="project-card">
+            <div class="project-meta">
+              <div class="project-title">
+                Internal Ticketing System (Ongoing)
+              </div>
+              <div class="project-tag">Support Platform</div>
+            </div>
+            <p class="project-summary">
+              Centralized platform to manage Starlinks support requests
+              (Procurement, HR, CX) with SLA enforcement, escalation logic, and
+              routing.
+            </p>
+            <ul class="project-list">
+              <li>Multi-parameter Routing.</li>
+              <li>SLA configuration with L1 escalations.</li>
+              <li>Automated L1 escalations on SLA Breach.</li>
+              <li>
+                Event-based email notifications and Teams approvals for Legal.
+              </li>
+              <li>
+                Cross-departmental ticket submission workflow (In Progress).
+              </li>
+              <li>
+                Form-based submissions, canned responses, comments, and history
+                logs.
+              </li>
+            </ul>
+          </article>
+          <!-- Mini Project – ZATCA Compliance (DDU Invoice Automation) -->
+          <article class="project-card">
+            <div class="project-meta">
+              <div class="project-title">Mini Project - ZATCA Compliance</div>
+              <div class="project-tag">DDU Invoice Automation</div>
+            </div>
+
+            <p class="project-summary"></p>
+
+            <ul class="project-list">
+              <li>Delivered in just 2 weeks using Power Platform.</li>
+              <li>Automatically sends DDU invoices to consignees.</li>
+              <li>
+                Over 1,000 DDU invoice emails successfully delivered to
+                consignees in the first 14 days post go-live.
+              </li>
+              <li>
+                ZATCA-compliant and fully automated using the Email Notification
+                Framework.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ROADMAP -->
+      <!-- <section class="section" id="roadmap">
+        <div class="section-title-row">
+          <div>
+            <div class="section-label">Section 03</div>
+            <h2>2026 Roadmap & Next Steps</h2>
+          </div>
+          <div class="section-subtitle">
+            Platform consolidation · Document automation · UX & productivity
+          </div>
+        </div>
+
+        <div class="image-placeholder" style="margin-bottom: 12px">
+          <span>ROADMAP VISUAL (OPTIONAL)</span>
+          Add a simple timeline or roadmap graphic here if desired.
+        </div>
+
+        <p style="font-size: 13px; margin-bottom: 6px">
+          Focused on platform consolidation, document automation, and continuous
+          UX & productivity improvements:
+        </p>
+        <ul class="roadmap-list">
+          <li>
+            Starlinks Workspaces – unified internal platform for dashboards,
+            documents, and tools.
+          </li>
+          <li>
+            LegalHub → Ticketing System – Legal as ticket category with approval
+            flows.
+          </li>
+          <li>
+            Document automation extended from appendix generation to SLAs and
+            contracts.
+          </li>
+          <li>
+            Enhancing overall process efficiency with additional automation.
+          </li>
+          <li>UI and UX improvements for Ticketing and Workspaces.</li>
+        </ul>
+
+        <div style="margin-top: 12px">
+          <span class="pill">Platform Consolidation</span>
+          <span class="pill">Automation-First</span>
+          <span class="pill">Scalable Architecture</span>
+          <span class="pill">User-Centric UX</span>
+        </div>
+      </section> -->
+
+      <!-- IMAGE GALLERY / VISUAL HIGHLIGHTS -->
+      <section class="section" id="visual-gallery">
+        <div class="section-title-row">
+          <div>
+            <div class="section-label">Section 02</div>
+            <h2>Visual Highlights</h2>
+          </div>
+          <div class="section-subtitle">Screenshots · UI</div>
+        </div>
+
+        <p
+          style="font-size: 13px; margin-bottom: 12px; color: var(--secondary)"
+        >
+          A consolidated visual appendix covering platform UIs, workflows,
+          frameworks, and supporting products built throughout 2025.
+        </p>
+
+        <div class="gallery-grid">
+          <!-- LaunchPad Home -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Home Page - Default View (LaunchPad)
+            </div>
+            <img
+              src="HomePage Default.png"
+              alt="LaunchPad Home Page"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <!-- Documents Section -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Documents Center - Centralized location for all Customer Documents
+              (LaunchPad)
+            </div>
+            <img
+              src="Documents.png"
+              alt="Customer Documents Section"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <!-- Contract -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Contract - Download the draft, upload the signed agreement and
+              review the finalized contract. (LaunchPad)
+            </div>
+            <img
+              src="Contract.jpeg"
+              alt="Contract"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <!-- SLA Document -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              SLA - Review the standard Starlinks SLAs. (LaunchPad)
+            </div>
+            <img
+              src="SLA.jpeg"
+              alt="Service Level Agreement Summary"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <!-- Dashboards -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Customer Dashboard - Real-Time Analytics from Shipsy, WMS Data
+              using Power BI. (LaunchPad)
+            </div>
+            <img
+              src="Dashboards.png"
+              alt="Customer Dashboards"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <!-- Technical Information -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              API Documention and Manuals for Customers (LaunchPad)
+            </div>
+            <img
+              src="Technical Information.png"
+              alt="Technical Information Module"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <!-- Finance Module -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Finance Module - Unified View of Invoices & financials KPIs
+              (LaunchPad)
+            </div>
+            <img
+              src="Finance.jpg"
+              alt="Finance Module Overview"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Automated Document Generation with Dynamic Data (HGV Appendix -
+              B2B) (LaunchPad)
+            </div>
+            <img
+              src="Appendix.png"
+              alt="Appendix"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Automated Contract Generation with DocuSign (Proof of Concept)
+            </div>
+            <img
+              src="ContractGeneration1.png"
+              alt="Finance Module Overview"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Automated Contract Generation with DocuSign (Proof of Concept)
+            </div>
+            <img
+              src="ContractGeneration2.png"
+              alt="Finance Module Overview"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <!-- <div class="gallery-item">
+            <img
+              src="Support Page.png"
+              alt="Finance Module Overview"
+              style="width: 100%; border-radius: 14px"
+            />
+            <div class="gallery-caption">
+              Automated Contract Generation with DocuSign - Proof of Concept
+            </div>
+          </div> -->
+
+          <div class="gallery-item">
+            <div class="gallery-caption">Legal Request Form (LegalHub)</div>
+            <img
+              src="Legal1.png"
+              alt="Legal Request Form (LegalHub)"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-caption">Track Legal Request (LegalHub)</div>
+            <img
+              src="Legal2.png"
+              alt="Track Legal Request"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Legal Team Members (Informative Section)
+            </div>
+            <img
+              src="Legal3.png"
+              alt="Legal Team Members (Informative Section)"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+          <!-- Error Management Framework -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Real-Time Workflow Failure Alerts to Developers (Error Management
+              Framework)
+            </div>
+            <img
+              src="EMF.png"
+              alt="Error Management Framework Alerts"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Multi Level Approval (MS Teams - similar is received on Outlook
+              Email) to Approve / Reject (LegalHub)
+            </div>
+            <img
+              src="LegalApproval.png"
+              alt="Finance Module Overview"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+
+          <!-- Onboarding Documents -->
+          <div class="gallery-item">
+            <div class="gallery-caption">
+              Self Customer Onboarding - Documents Collections (LaunchPad)
+            </div>
+            <img
+              src="Onboarding Documents.png"
+              alt="Onboarding Documents"
+              style="width: 100%; border-radius: 14px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div>FY 2025 - <strong>Rehan Memon</strong></div>
+        <div class="footer-right">
+          SP1 - Specialist Product Development · Starlinks
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
