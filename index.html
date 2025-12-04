@@ -401,6 +401,114 @@
           border-style: solid;
         }
       }
+
+      /* EXTRA MOBILE RESPONSIVENESS */
+      @media (max-width: 600px) {
+        body {
+          padding: 12px;
+        }
+
+        .page {
+          padding: 16px 14px 24px;
+          border-radius: 12px;
+        }
+
+        /* Header adjustments */
+        .header-improved {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          text-align: left;
+        }
+
+        .header-right {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+        }
+
+        .profile-photo {
+          width: 68px;
+          height: 68px;
+        }
+
+        h1 {
+          font-size: 22px;
+        }
+
+        .role-line {
+          font-size: 13px;
+        }
+
+        .email-line a {
+          font-size: 12px;
+        }
+
+        /* Sections adjustments */
+        .section h2 {
+          font-size: 18px;
+        }
+
+        .section-subtitle {
+          font-size: 12px;
+        }
+
+        .section-title-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+
+        /* Projects */
+        .projects-grid {
+          grid-template-columns: 1fr !important;
+          gap: 14px;
+        }
+
+        .project-card {
+          padding: 14px 12px;
+        }
+
+        .project-title {
+          font-size: 13px;
+        }
+
+        .project-summary {
+          font-size: 12px;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+          grid-template-columns: 1fr !important;
+          gap: 18px;
+        }
+
+        .gallery-caption {
+          font-size: 11px !important;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        /* List adjustments */
+        ul {
+          font-size: 12px;
+        }
+
+        .roadmap-list {
+          columns: 1 !important;
+        }
+
+        /* Footer */
+        footer {
+          flex-direction: column;
+          gap: 4px;
+          text-align: left;
+          font-size: 10px;
+        }
+      }
     </style>
   </head>
   <body>
